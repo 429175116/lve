@@ -1,0 +1,4 @@
+<!--pages/nav.wxml-->
+<view class="title">
+    顶部导航部分
+</view>

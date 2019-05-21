@@ -1,0 +1,84 @@
+<!--pages/index/live/live.wxml-->
+<!-- 直播页 -->
+<view class="title {{_orientation=='horizontal'?'domNone':''}}">
+    <image src='/img/return.png' bindtap="goReturn"></image>
+    直播
+</view>
+<!-- <live-player data-id="{{liveData.id}}" id="live" class="{{_orientation=='horizontal'?'horizontalClass':''}} {{_orientation=='vertical'?'verticalClass':''}}" src="rtmp://27526.liveplay.myqcloud.com/live/27526_b9e3b0ce991811e892905cb9018cf0d4_900" mode="live"  
+    orientation="{{_orientation}}" autoplay bindstatechange="statechange" binderror="error" /> -->
+<live-player data-id="{{liveData.id}}" id="live" class="{{_orientation=='horizontal'?'horizontalClass':''}} {{_orientation=='vertical'?'verticalClass':''}}" src="{{liveData.push_url}}" mode="live" orientation="{{_orientation}}" autoplay bindstatechange="statechange"
+    binderror="error" />
+
+<cover-image class="{{_orientation=='horizontal'?'fullScreen':''}} {{_orientation=='vertical'?'direction':''}}" bindtap="fullScreen" src="/img/{{_orientation=='horizontal'?'directionImg':''}}{{_orientation=='vertical'?'fullScreenImg':''}}.png"></cover-image>
+<view class="navGoAllArticle">
+    <view class="ft_item" bindtap="goAllArticle">
+        <text>学院活动</text>
+    </view>
+</view>
+<view class="nav {{_orientation=='horizontal'?'domNone':''}}">
+    <button class="button serviceButton" open-type="contact" session-from="weapp">
+        <image src="/img/servicelive.png"></image>
+        客服
+    </button>
+    <view class="ft_item {{_Category==1?'action':''}}" data-sel="1" bindtap="showChat">
+        <text>聊天</text>
+    </view>
+    <view class="ft_item {{_Category==2?'action':''}}" data-sel="2" bindtap="showMemberist">
+        <text>会员列表</text>
+    </view>
+    <view class="ft_item {{_Category==3?'action':''}}" data-sel="3" bindtap="showReward">
+        <text>打赏</text>
+    </view>
+</view>
+<!-- 聊天室显示部分 -->
+<view style="display:{{showChat}}" class="comment {{_orientation=='horizontal'?'domNone':''}}">
+    <scroll-view scroll-y="true" scroll-top="{{scrollTop}}" class='commentContent'>
+        <block wx:for="{{chatCacheInfo}}" wx:for-item="list" wx:key="index">
+            <view class='commentList'>
+                <view class='vipListName lvColor-font-{{list.member_id}}'>
+                    <image src='/img/vip-{{list.member_id}}.png'></image>
+                    {{list.username}}
+                </view>
+                <view class='commentonter'>{{list.message}}</view>
+            </view>
+        </block>
+    </scroll-view>
+    <form bindsubmit='chatSet'>
+        <view class='commentSet'>
+            <input type='text' name="chatContent" value='{{chatContent}}' placeholder=""></input>
+            <button formType="submit">发送</button>
+        </view>
+    </form>
+</view>
+
+<!-- 会员列表 -->
+<view style="display:{{showMemberist}}" class="comment {{_orientation=='horizontal'?'domNone':''}}">
+    <scroll-view scroll-y="true" class='vipListContent'>
+        <block wx:for="{{vipLvData}}" wx:for-item="list" wx:key="index">
+            <view class='commentList' data-id="{{list.id}}" data-onClick="{{list.click}}" bindtap="showVipList">
+                <view class='vipListName'>
+                    <image src='/img/vip-{{list.id}}.png'></image>
+                    {{list.name}}
+                </view>
+            </view>
+        </block>
+        <view class="noData {{vipLvData==''?'show':''}}">暂无数据</view>
+    </scroll-view>
+</view>
+<!-- 打赏商品列表 -->
+<view style="display:{{showReward}}" class="comment {{_orientation=='horizontal'?'domNone':''}}">
+    <view class="giftAnimation" style='display:{{display}};left:{{position_x}}px;top:{{position_y}}px;opacity:{{opacity}};'>
+        <image src='{{imaUrl}}{{giftAnimationImg}}'></image>
+    </view>
+    <scroll-view scroll-y="true" class="showReward floor box-enter">
+        <block wx:for="{{giftData}}" wx:for-item="list" wx:key="index">
+            <view class="quick-entry-link fz12 J_ping" bindtap="sendOut" data-money="{{list.money}}" data-giftimg="{{list.img}}">
+                <image width="45" height="45" src="{{imaUrl}}{{list.img}}"></image>
+                <span>{{list.title}}</span>
+                <span>￥{{list.money}}</span>
+            </view>
+        </block>
+        <view class="noData {{giftData==''?'show':''}}">暂无礼物列表</view>
+    </scroll-view>
+
+</view>

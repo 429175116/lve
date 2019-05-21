@@ -1,0 +1,26 @@
+<!--pages/index/videoList/videoList.wxml-->
+<!-- 视频列表 -->
+<view class="title">
+    <image src='/img/return.png' bindtap="goReturn"></image>
+    {{listName}}
+</view>
+<view class='content'>
+    <view class="listCon">
+        <block wx:for="{{voideListData}}" wx:for-item="list" wx:key="index">
+            <view bindtap="goVideo" class='conterInfo' data-id="{{list.id}}" data-member_id="{{list.member_id}}">
+                <view class='imgShow'>
+                    <view class='subscript lvColor-{{list.member_id}}'>{{list.name}}</view>
+                    <image src="{{imaUrl}}{{list.img}}"></image>
+                </view>
+                <view class='Info-text'>
+                    <view>
+                        {{list.title}}
+                    </view>
+                    <text>{{list.des}}</text>
+                </view>
+            </view>
+        </block>
+        <view class="noData {{voideListData==''?'show':''}}">暂无数据</view>
+    </view>
+
+</view>

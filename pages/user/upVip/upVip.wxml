@@ -1,0 +1,33 @@
+<!--pages/user/upVip/upVip.wxml-->
+<view class="title">
+    <image src='/img/return.png' bindtap="goReturn"></image>
+    升级会员
+</view>
+<view class="wx_wrap">
+    <view id="wrapper" style="display: block;" data-tag="wrapper">
+        <section class="account_section" id="accountDetail">
+            <view class="account_card">
+                <view class="account_card_profile">
+                    <image src="{{avatarUrl}}"></image>
+                </view>
+            </view>
+            <form bindsubmit='upVip'>
+                <view class='fromClas'>
+                    <ul class="account_manage">
+                        <li class="item">
+                            <picker bindchange="vipSel" value="{{vipLvData[index].id}}" range="{{vipLvData}}" range-key="name">
+                                <input type='hidden' name="vipName" value='{{vipName}}' placeholder="请选择会员等级" disabled="disabled"></input>
+                            </picker>
+                        </li>
+                        <li class="item">
+                            <input type='hidden' name="vipRule" value='{{vipRule}}' placeholder="会员价格/月" disabled="disabled"></input>
+                        </li>
+                    </ul>
+                </view>
+                <view class='fromClas setButton'>
+                    <button formType="submit">升级会员</button>
+                </view>
+            </form>
+        </section>
+    </view>
+</view>

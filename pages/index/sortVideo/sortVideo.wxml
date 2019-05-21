@@ -1,0 +1,26 @@
+<!--pages/index/sortVideo/sortVideo.wxml-->
+<view class="title">
+    <image src='/img/return.png' bindtap="goReturn"></image>
+    所有直播
+</view>
+<view class='voideTitle'>视频分类名称</view>
+<view class='content'>
+    <view class="listCon">
+        <block wx:for="{{liveData}}" wx:for-item="list" wx:key="index">
+            <view bindtap="goLive" class='conterInfo' data-id="{{list.id}}" data-static="{{list.static}}">
+                <view class='imgShow'>
+                    <image src="{{imaUrl}}{{list.img}}"></image>
+                </view>
+                <view class='Info-text'>
+                    <view>
+                        {{list.title}}
+                        <text>{{list.time}}</text>
+                    </view>
+
+                    <text>{{list.time}}</text>
+                </view>
+            </view>
+        </block>
+    </view>
+
+</view>

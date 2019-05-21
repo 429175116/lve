@@ -1,0 +1,39 @@
+<!--pages/index/article/article.wxml-->
+<!-- 文章页 -->
+<!-- 导入转html包 -->
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="title">
+    <image src='/img/return.png' bindtap="goReturn"></image>
+    文章
+</view>
+<!-- <swiper class="swiper" interval="5000" duration="1000">
+    <block>
+        <swiper-item>
+            <image src="{{imaUrl}}{{articleData.img}}" class="slide-image" mode="aspectFill" />
+        </swiper-item>
+    </block>
+</swiper> -->
+<view class='articleTitle'>{{articleData.title}}</view>
+<view class='content'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>
+
+<view class='comment'>
+    <view class='commentTitle'>评论专区</view>
+    
+    <scroll-view scroll-y="true" class='commentContent'>
+        <block wx:for="{{commentInfo}}" wx:for-item="list">
+            <view class='commentList' data-id="{{list.id}}">
+                <view class='commentName'>{{list.username}}</view>
+                <view class='commentonter'>{{list.content}}</view>
+            </view>
+        </block>
+        <view class="noData {{commentInfo==''?'show':''}}">暂无评论</view>
+    </scroll-view>
+    <form bindsubmit='setCommentInfo'>
+        <view class='commentSet'>
+            <input type='text' name="commentContent" value='{{commentContent}}' placeholder="在这个输入想评论的话"></input>
+            <button formType="submit">发送</button>
+        </view>
+    </form>
+</view>

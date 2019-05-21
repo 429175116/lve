@@ -1,0 +1,17 @@
+<!--pages/user/productInfo/productInfo.wxml-->
+<view class="title">
+    <image src='/img/return.png' bindtap="goReturn"></image>
+    {{articleData.title}}
+</view>
+<swiper class="swiper" interval="5000" duration="1000">
+    <block>
+        <swiper-item>
+            <image src="{{imaUrl}}/20180815/e06c69d106d3cec7ddbfe1f3256c1a9f.png" class="slide-image" mode="aspectFill" />
+        </swiper-item>
+    </block>
+</swiper>
+<view class='articleTitle'>{{articleData.title}}啊手动阀手动阀手动阀</view>
+<view class='content'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    asdfasdfadsf
+</view>

@@ -1,0 +1,66 @@
+/* pages/index/sortVideo/sortVideo.wxss */
+.voideTitle{
+    height: 80rpx;
+    line-height: 80rpx;
+    width: 100%;
+    padding: 30rpx;
+    font-weight: 600;
+    color: #333;
+}
+.content .listCon {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding: 30rpx 60rpx;
+}
+
+.conterInfo {
+    width: 650rpx;
+    margin-bottom: 50rpx;
+}
+
+.conterInfo view {
+    border-radius: 30rpx;
+    overflow: hidden;
+    position: relative;
+}
+
+.content .listCon image {
+    width: 100%;
+    height: 400rpx;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -10;
+}
+
+.imgShow {
+    height: 400rpx;
+}
+
+.Info-text {
+    color: #333;
+    font-size: 35rpx;
+    padding-left: 40rpx;
+}
+
+.Info-text view {
+    font-weight: 600;
+}
+
+.subscript {
+    color: #fff;
+    font-size: 20rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    width: 300rpx;
+    position: absolute;
+    right: -465rpx;
+    top: -5rpx;
+    text-align: center;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

@@ -1,0 +1,15 @@
+/* pages/user/publicQRCode/publicQRCode.wxss */
+
+.previewimg {
+    height: 800rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+image {
+    width: 320rpx;
+    height: 620rpx;
+    flex:1;
+    overflow: hidden;
+}

@@ -1,0 +1,38 @@
+/* pages/index/video/video.wxss */
+
+#videoDom {
+    width: 100%;
+    height: 600rpx;
+}
+
+input {
+    border-radius: 0;
+    border: 0;
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: PingFang-SC-Regular;
+}
+
+.videoInfo {
+    padding-left: 30rpx;
+    color: #999;
+    font-size: 30rpx;
+}
+
+.videoInfo .videoTitle {
+    height: 100rpx;
+    line-height: 100rpx;
+}
+
+.videoInfo .videoTitle text {
+    height: 100rpx;
+    line-height: 100rpx;
+    color: #333;
+}
+
+.videoInfo .content {
+    padding: 0 60rpx;
+    height: auto;
+    word-wrap: break-word;
+}

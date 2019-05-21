@@ -1,0 +1,77 @@
+<!--pages/index.wxml-->
+
+<view class="title">
+    国盛学院
+</view>
+<!-- 授权按钮 -->
+<view class="Authorization" style="display:{{show}}">
+    <button open-type="getUserInfo" class='mod_btn bg_1 ' lang="zh_CN" bindgetuserinfo="onGotUserInfo">小程序授权</button>
+</view>
+<view class='page'>
+    <!-- 师资轮播 -->
+    <swiper class="swiper" autoplay="true" interval="3000" duration="1000">
+        <block wx:for="{{teacherData}}" wx:for-item="list" wx:key="index">
+            <swiper-item bindtap="goTeacherInfo" data-id="{{list.id}}" scroll-x="true" scroll-y="false">
+                <image src="{{imaUrl}}{{list.img}}" class="slide-image" mode="scaleToFill" />
+            </swiper-item>
+        </block>
+    </swiper>
+    <!-- 视频分类 -->
+    <view class='categoryIcon floor box-enter'>
+        <block wx:for="{{videSort}}" wx:for-item="list" wx:key="index">
+            <view class="quick-entry-link fz12 J_ping" data-id="{{list.id}}" data-name="{{list.cate_name}}" bindtap="goVideoList">
+                <image width="45" height="45" src="{{imaUrl}}{{list.icon}}"></image>
+                <span>{{list.cate_name}}</span>
+            </view>
+        </block>
+    </view>
+    <!-- 直播部分 --><!-- 直播轮播 -->
+    <!-- <view class='floor box-enter  live'>
+        <view id="seckill_title" class="title-wrap">
+            <view class="seckill-left-link  J_ping">
+                <strong id="seckill_name" class="seckill-tit-txt">精选直播</strong>
+            </view>
+            <view class="seckill-more-link  J_ping" bindtap="goLiveList">
+                全部
+                <i class="seckill-more-icon"></i>
+            </view>
+        </view>
+        
+        <swiper class="swiper" autoplay="true" interval="3000" duration="1000">
+            <block wx:for="{{liveData}}" wx:for-item="list" wx:key="index">
+                <swiper-item bindtap="goLive" data-id="{{list.id}}" data-memberId="{{memberId}}" data-static="{{list.static}}">
+                    <image src="{{imaUrl}}{{list.img}}" class="slide-image" mode="scaleToFill" />
+                </swiper-item>
+            </block>
+        </swiper> 
+    </view> -->
+    <!-- <view class='categoryList floor box-enter'>
+
+    </view> -->
+    <!-- 文章部分 -->
+    <view class='categoryList articleContent floor box-enter'>
+        <view id="seckill_title" class="title-wrap">
+            <view class="seckill-left-link  J_ping">
+                <strong id="seckill_name" class="seckill-tit-txt">精选文章</strong>
+            </view>
+            <view class="seckill-more-link  J_ping" bindtap="goArticleList">
+                全部
+                <i class="seckill-more-icon"></i>
+            </view>
+        </view>
+        <block wx:for="{{articleData}}" wx:for-item="listData" wx:key="index">
+            <view class="articleLists" bindtap="goArticle" data-id="{{listData.id}}">
+                <view class='articleTitle'>
+                    {{listData.title}}
+                </view>
+                <image width="300rpx" height="200rpx" src="{{imaUrl}}{{listData.img}}"></image>
+                <view class='articleInfo'>{{listData.brows}}人读过</view>
+            </view>
+        </block>
+        <view class="noData {{articleData==''?'show':''}}">暂无数据</view>
+    </view>
+</view>
+
+
+
+<include src="/pages/nav.wxml" />

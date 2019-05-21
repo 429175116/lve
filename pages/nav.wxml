@@ -1,0 +1,19 @@
+<!--pages/nav.wxml-->
+<view class="footer">
+    <view class="ft_item on" bindtap="goHome">
+        <image src="/img/{{navImg.Home}}.png"></image>
+        <text>首页</text>
+    </view>
+    <view class="ft_item" bindtap="goClassroom">
+        <image src="/img/{{navImg.Classroom}}.png"></image>
+        <text>学习课堂</text>
+    </view>
+    <view class="ft_item" bindtap="myCourse">
+        <image src="/img/{{navImg.myCourse}}.png"></image>
+        <text>我的课程</text>
+    </view>
+    <view class="ft_item" bindtap="goUser">
+        <image src="/img/{{navImg.User}}.png"></image>
+        <text>个人中心</text>
+    </view>
+</view>

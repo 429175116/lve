@@ -1,0 +1,29 @@
+/* pages/index/allArticle/allArticle.wxss */
+.nav {
+    height: 90rpx;
+    line-height: 80rpx;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1rpx solid #e2e2e2;
+    white-space: nowrap;
+}
+
+.nav .ft_item {
+    height: 88rpx;
+    padding: 0 50rpx;
+    display:inline-block;
+    text-align: center;
+}
+
+.nav .ft_item text {
+    text-align: center;
+    font-size: 26rpx;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10rpx;
+    color: #333;
+}
+.action{
+    border-bottom: 1px solid #EDAA2A;
+    color: #EDAA2A
+}

@@ -1,0 +1,28 @@
+<!--pages/user/recharge/recharge.wxml-->
+<view class="title">
+    <image src='/img/return.png' bindtap="goReturn"></image>
+    充值
+</view>
+<view class="wx_wrap">
+    <view id="wrapper" style="display: block;" data-tag="wrapper">
+        <section class="account_section" id="accountDetail">
+            <view class="account_card">
+                <view class="account_card_profile">
+                    <image src="{{avatarUrl}}"></image>
+                </view>
+            </view>
+            <form bindsubmit='recharge'>
+                <view class='fromClas'>
+                    <ul class="account_manage">
+                        <li class="item">
+                            <input type='text' name="recharge" placeholder="请输入金额"></input>
+                        </li>
+                    </ul>
+                </view>
+                <view class='fromClas setButton'>
+                    <button formType="submit">充值</button>
+                </view>
+            </form>
+        </section>
+    </view>
+</view>

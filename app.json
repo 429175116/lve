@@ -1,0 +1,28 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/index/live/live",
+        "pages/index/article/article",
+        "pages/index/sortVideo/sortVideo",
+        "pages/index/videoList/videoList",
+        "pages/index/allArticle/allArticle",
+        "pages/index/teacherInfo/teacherInfo",
+        "pages/classroom/classroom",
+        "pages/myCourse/myCourse",
+        "pages/user/user",
+        "pages/user/out/out",
+        "pages/index/video/video",
+        "pages/user/recharge/recharge",
+        "pages/user/setUserInfo/setUserInfo",
+        "pages/user/publicQRCode/publicQRCode",
+        "pages/user/upVip/upVip",
+        "pages/user/productInfo/productInfo"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "国盛学院",
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "black"
+    }
+}

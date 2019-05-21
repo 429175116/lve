@@ -1,0 +1,69 @@
+<!--pages/user/user.wxml-->
+<view class="title">
+    我的会员
+</view>
+<view class="wx_wrap">
+    <view id="wrapper" style="display: block;" data-tag="wrapper">
+        <section class="account_section" id="accountDetail">
+            <view class="vipTime">
+                <view class='vipTime-title'>会员到期</view>
+                <view class='vipTime-content'>{{end_time}}</view>
+            </view>
+            <view class="account_card">
+                <view class="account_card_profile" bindtap="goSetUserInfo">
+                    <image src="{{avatarUrl}}"></image>
+                </view>
+            </view>
+            <view class="account_card">
+                <view class="account_card_info" bindtap="goUpVip">
+                    <view class="account_card_name">Lv</view>
+                    <view class="account_card_email">{{vipName}}</view>
+                </view>
+                <view class="account_card_info">
+                    <view class="account_card_name">余额</view>
+                    <view class="account_card_email">￥{{money}}</view>
+                </view>
+                <view class="account_card_info" bindtap="goRecharge">
+                    <view class="account_card_name">充值</view>
+                    <view class="account_card_email">
+                        <image class='go' src="/img/go.png"></image>
+                    </view>
+                </view>
+            </view>
+            <ul class="account_manage">
+                <li class="item">
+                    <button class="button serviceButton" open-type="contact" session-from="weapp">
+                        <view class="J_ping">
+                            <image src="/img/service.png"></image>
+                            联系客服
+                            <image class='go' src="/img/go.png"></image>
+                        </view>
+                    </button>
+                </li>
+                <li class="item">
+                    <view class="J_ping" bindtap="goProductInfo">
+                        <image src="/img/share.png"></image>
+                        产品介绍
+                        <image class='go' src="/img/go.png"></image>
+                    </view>
+                </li>
+                <li class="item">
+                    <view class="J_ping" bindtap="publicQR">
+                        <image src="/img/public.png"></image>
+                        公众号
+                        <image class='go' src="/img/go.png"></image>
+                    </view>
+                </li>
+                <li class="item Jump">
+                    <view class="J_ping" bindtap="goOutUrl">
+                        www.gupiaobanwang.com
+                        <image src="/img/share.png"></image>
+                    </view>
+                </li>
+            </ul>
+        </section>
+    </view>
+</view>
+
+
+<include src="/pages/nav.wxml" />

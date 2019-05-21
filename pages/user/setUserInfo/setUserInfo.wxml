@@ -1,0 +1,40 @@
+<!--pages/user/setUserInfo/setUserInfo.wxml-->
+<view class="title">
+    <image src='/img/return.png' bindtap="goReturn"></image>
+    个人信息修改
+</view>
+<view class="wx_wrap">
+    <view id="wrapper" style="display: block;" data-tag="wrapper">
+        <section class="account_section" id="accountDetail">
+            <view class="account_title">信息修改</view>
+            <view class="account_card">
+                <view class="account_card_profile">
+                    <image src="{{avatarUrl}}"></image>
+                </view>
+            </view>
+            <form bindsubmit='onTabsItemTap'>
+                <view class='fromClas'>
+                    <ul class="account_manage">
+                        <li class="item">
+                            <input type='text' name="username" value='{{username}}' placeholder="请输入姓名"></input>
+                        </li>
+                        <li class="item">
+                            <input type='text' name="phone" value='{{phone}}' placeholder="请输入联系方式"></input>
+                        </li>
+                        <li class="item">
+                            <input type='text' name="weicode" value='{{weicode}}' placeholder="请输入微信号"></input>
+                        </li>
+                        <li class="item">
+                            <picker mode="date" value="{{date}}" start="1978-01-01" end="2017-1-23" bindchange="bindDateChange">
+                                <input type='text' name="birthday" value='{{birthday}}' placeholder="请选择生日"></input>
+                            </picker>
+                        </li>
+                    </ul>
+                </view>
+                <view class='fromClas setButton'>
+                    <button formType="submit">修改</button>
+                </view>
+            </form>
+        </section>
+    </view>
+</view>

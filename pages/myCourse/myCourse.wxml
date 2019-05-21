@@ -1,0 +1,29 @@
+<!--pages/myCourse/myCourse.wxml-->
+<view class="title">
+    我的课程
+</view>
+<scroll-view scroll-x="true" class="nav">
+    <block wx:for="{{sort}}" wx:for-item="list" wx:key="index">
+        <view class="ft_item {{_Category==list.id?'action':''}}" data-id="{{list.id}}" bindtap="clickCategory">
+            <text>{{list.cate_name}}</text>
+        </view>
+    </block>
+</scroll-view>
+<view>
+    <block wx:for="{{voideListData}}" wx:for-item="list" wx:key="index">
+        <view class="articleList" bindtap="govideo" data-id="{{list.id}}">
+            <view class='articleListCla'>
+                <view class='number'>{{index+1}}</view>
+                <view class='description'>
+                    {{list.title}}
+                </view>
+                <view class='img'>
+                    <image src="{{imaUrl}}{{list.img}}"></image>
+                </view>
+            </view>
+        </view>
+    </block>
+    <view class="noData {{voideListData==''?'show':''}}">暂无数据</view>
+</view>
+
+<include src="/pages/nav.wxml" />

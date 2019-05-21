@@ -1,0 +1,28 @@
+<!--pages/index/allArticle/allArticle.wxml-->
+<view class="title">
+    <image src='/img/return.png' bindtap="goReturn"></image>
+    所有文章
+</view>
+<!-- 全部文章列表 -->
+<scroll-view scroll-x="true" class="nav">
+    <block wx:for="{{sort}}" wx:for-item="list" wx:key="index">
+        <view class="ft_item {{_Category==list.id?'action':''}}" data-id="{{list.id}}" bindtap="clickCategory">
+            <text>{{list.cate_name}}</text>
+        </view>
+    </block>
+</scroll-view>
+<view>
+    <block wx:for="{{articleData}}" wx:for-item="list" wx:key="index">
+        <view class="articleList" bindtap="goArticle" data-id="{{list.id}}">
+            <view class='articleListCla'>
+                <view class='number'>{{list.brows}}</view>
+                <view class='description'>
+                    {{list.title}}
+                </view>
+                <view class='img'>
+                    <image src="{{imaUrl}}{{list.img}}"></image>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

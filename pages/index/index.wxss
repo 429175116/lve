@@ -1,0 +1,325 @@
+/* pages/index.wxss */
+page{
+    background-color: #eee;
+}
+.swiper {
+    width: 100%;
+    height: 400rpx;
+    border-radius: 10rpx;
+    background-color: #fff;
+}
+
+#slider+view {
+    margin-top: -1.8125rem;
+}
+
+#slider+view {
+    position: relative;
+    z-index: 10;
+    margin-top: -.9375rem;
+    border-radius: 0.625rem 0.625rem 0 0;
+    overflow: hidden;
+}
+
+.homeListName {
+    height: 110rpx;
+    line-height: 150rpx;
+    width: 100%;
+    text-align: center;
+    font-size: 30rpx;
+    color: #333;
+    background: #fff;
+}
+.categoryIcon{
+    height: auto;
+    background-color: #fff;
+    padding: 30rpx 0;
+}
+.categoryIcon .quick-entry-link {
+    height: 130rpx;
+    width: 25%;
+    display:inline-block;
+    position: relative;
+    color: #686868;
+    font-size: 0.6875rem;
+    padding: 10rpx 0;
+    text-align: center;
+    font-family: PingFang-Medium, PingFangSC-Regular, Helvetica;
+    margin: 0;
+}
+.categoryIcon image {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.categoryIcon  span {
+    font-size: 0.75rem;
+}
+.categoryIcon span {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: box;
+    line-clamp: 1;
+    box-orient: vertical;
+    height: 0.875rem;
+    line-height: 0.875rem;
+}
+.categoryList {
+    height: auto;
+    background-color: #fff;
+}
+
+.categoryList .info {
+    display: flex;
+}
+
+.categoryList .info span {
+    width: 50%;
+}
+
+.categoryList .info image {
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    left: 0rpx;
+}
+.categoryList .views image {
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    left: 50%;
+}
+.categoryList .info .vipImg,.categoryList .info .views{
+    padding-left: 40rpx
+}
+
+.floor {
+    font-size: 0;
+    width: 100%;
+}
+
+.floor-item, .floor-item-slide {
+    width: 100%;
+    font-size: 100%;
+}
+
+.floor-item {
+    height: 200px;
+    overflow: hidden;
+}
+
+.position-r {
+    position: relative;
+}
+
+a, view, header, span {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+#scwrapper .position-ab.quick-entry-nav {
+    padding: 0.25rem 0 1.125rem;
+}
+
+.position-ab.quick-entry-nav {
+    padding: 10px 0;
+    min-height: 10.125rem;
+}
+
+.quick-entry-nav {
+    padding-top: 11px;
+}
+
+.position-ab {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
+section {
+    display: block;
+}
+
+.quick-nav-five .quick-entry-link {
+    width: 25%;
+}
+
+a:hover, a:visited {
+    text-decoration: none;
+}
+
+.floor a {
+    text-decoration: none;
+}
+
+.quick-entry-link {
+    height: 250rpx;
+    width: 48%;
+    display: inline-block;
+    position: relative;
+    color: #686868;
+    font-size: 0.6875rem;
+    padding: 10rpx 0;
+    text-align: center;
+    font-family: PingFang-Medium, PingFangSC-Regular, Helvetica;
+    margin: 1%;
+}
+
+.quick-nav-five .quick-box {
+    height: 3.625rem;
+}
+
+.quick-box {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 44px;
+}
+
+a, view, header, span {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.categoryList image {
+    width: 100%;
+    height: 200rpx;
+}
+
+.quick-nav-five .quick-entry-link image {
+    width: 2.125rem;
+    height: 2.125rem;
+    margin: 0 auto 0.2188rem;
+}
+
+.categoryList  span {
+    font-size: 0.75rem;
+}
+
+.categoryList span {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: box;
+    line-clamp: 1;
+    box-orient: vertical;
+    height: 0.875rem;
+    line-height: 0.875rem;
+    text-align: left;
+}
+
+a, view, header, span {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.seckill-floor .title-wrap {
+    height: 34px;
+    line-height: 34px;
+    vertical-align: middle;
+}
+#seckill_title{
+    margin-top: 20rpx; 
+}
+.title-wrap {
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.seckill-left-link {
+    display: inline-block;
+    float: left;
+    width: 60%;
+}
+
+.seckill-tit-txt {
+    margin: 0.125rem 0.375rem 0;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.seckill-more-link {
+    width: 32%;
+    display: inline-block;
+    color: #999;
+    font-size: 30rpx;
+    text-align: right;
+    position: relative;
+    padding-right: 22px;
+}
+
+.seckill-more-icon {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    background-size: cover;
+    position: absolute;
+    right: 8px;
+    top: 11px;
+}
+
+.Authorization {
+    width: 150rpx;
+    height: 80rpx;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 111;
+}
+
+.Authorization button {
+    width: 150rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    position: fixed;
+    right: 10rpx;
+    top: 300rpx;
+    font-size: 20rpx;
+    color: #eee;
+    background-color: #333;
+}
+
+.live{
+    padding-bottom: 20rpx; 
+    background-color: #fff;
+}
+
+.articleContent{
+    background-color: #eee;
+}
+
+.articleLists{
+    width: 700rpx;
+    height: auto;
+    font-size: 30rpx;
+    padding: 20rpx;
+    margin-bottom: 20rpx;
+    background-color: #fff;
+}
+
+.articleLists image{
+    margin-top: 20rpx;
+    width: 500rpx;
+    height: 300rpx;
+    border-radius: 0rpx;
+}
+
+.articleLists .articleTitle{
+    width: 100%;
+    height: auto;
+}
+.articleLists .articleInfo{
+    width: 100%;
+    height: 100%;
+    color: #686868;
+}

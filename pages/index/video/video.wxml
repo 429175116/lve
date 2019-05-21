@@ -1,0 +1,18 @@
+<!--pages/index/video/video.wxml-->
+<view class="title">
+    <image src='/img/return.png' bindtap="goReturn"></image>
+    {{videoData.title}}
+</view>
+<video id='videoDom' src="{{videoData.src}}" binderror="videoErrorCallback"></video>
+
+<view class='videoInfo'>
+    <view class='videoTitle'>
+        <text>视频名称：</text> {{videoData.title}}
+    </view>
+    <view class='videoTitle'>
+        <text>视频简介：</text>
+    </view>
+    <view class='content'>
+        {{videoData.des}}
+    </view>
+</view>

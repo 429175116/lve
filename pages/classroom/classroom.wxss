@@ -1,0 +1,120 @@
+/* pages/classroom/classroom.wxss */
+
+page {
+    height: 100%;
+}
+
+.nav {
+    height: 80rpx;
+    line-height: 70rpx;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1rpx solid #e2e2e2;
+}
+
+.nav .ft_item {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    float: left;
+}
+
+.nav .ft_item text {
+    text-align: center;
+    font-size: 26rpx;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10rpx;
+    color: #333;
+    font-weight: 550;
+}
+
+.nav .action text {
+    color: #edaa2a;
+}
+
+.content {
+    display: flex;
+    height: 100%;
+    margin-bottom:200rpx;
+}
+
+.content .list {
+    width: 30%;
+    height: 100%;
+    border-right: 1px solid #eee;
+}
+
+.list .title {
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    color: #999;
+    font-size: 25rpx;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.list .action {
+    background-color: #edaa2a;
+    color: #fff;
+}
+
+.content .listCon {
+    width: 70%;
+    height: 100%;
+    flex-direction:row;
+    padding: 30rpx 60rpx;
+}
+
+.conterInfo {
+    width: 450rpx;
+    margin-bottom: 30rpx;
+}
+
+.conterInfo view {
+    border-radius: 30rpx;
+    overflow: hidden;
+    position: relative;
+}
+
+.content .listCon image {
+    width: 100%;
+    height: 200rpx;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -10;
+}
+
+.imgShow {
+    height: 200rpx;
+}
+
+.Info-text {
+    color: #333;
+    font-size: 25rpx;
+    padding-left: 40rpx;
+}
+
+.Info-text view {
+    border-radius:0rpx;
+    font-weight: 600;
+}
+
+.subscript {
+    color: #fff;
+    font-size: 20rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    width: 300rpx;
+    position: absolute;
+    right: -265rpx;
+    top: -5rpx;
+    text-align: center;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

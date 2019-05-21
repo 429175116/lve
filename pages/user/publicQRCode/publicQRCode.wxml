@@ -1,0 +1,12 @@
+<!--pages/user/publicQRCode/publicQRCode.wxml-->
+<view class="title">
+    <image src='/img/return.png' bindtap="goReturn"></image>
+    公众号二维码
+</view>
+<view class="title">
+    点击放大，长按可操作
+</view>
+
+<view wx:for="{{imgalist}}"wx:for-item="image"class="previewimg">  
+  <image src="{{image}}" data-src="{{image}}" bindtap="previewImage" class='img'></image>  
+</view> 

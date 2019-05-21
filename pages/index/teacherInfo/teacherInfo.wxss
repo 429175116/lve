@@ -1,0 +1,15 @@
+/* pages/classroom/teacherInfo/teacherInfo.wxss */
+.teacherTitle{
+    width: 100%;
+    height: 150rpx;
+    line-height: 150rpx;
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+    color: #333;
+}
+.content{
+    padding: 0px 20rpx 20rpx 20rpx;
+    color: #333;
+    line-height: 25px;
+}

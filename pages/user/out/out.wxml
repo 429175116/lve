@@ -1,0 +1,3 @@
+<!--pages/user/out/out.wxml-->
+<!-- 小程序进入其他网站 -->
+<web-view src="https://www.gupiaobanwang.com"></web-view>

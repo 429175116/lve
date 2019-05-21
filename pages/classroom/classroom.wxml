@@ -1,0 +1,38 @@
+<!--pages/classroom/classroom.wxml-->
+<!-- <view class="nav">
+    <view class="ft_item {{_Switch==1?'action':''}}" data-sel="1" bindtap="showSwitch">
+        <text>直播回放</text>
+    </view>
+    <view class="ft_item {{_Switch==2?'action':''}}" data-sel="2" bindtap="showSwitch">
+        <text>精选课堂</text>
+    </view>
+</view> -->
+<view class="title">
+    学习课堂
+</view>
+<view class='content'>
+    <view class="list">
+        <block wx:for="{{sort}}" wx:for-item="list">
+            <view class="title {{_Category==list.id?'action':''}}" data-id="{{list.id}}" bindtap="clickCategory">{{list.cate_name}}</view>
+        </block>
+    </view>
+    <view class="listCon">
+        <block wx:for="{{voideListData}}" wx:for-item="list">
+            <view class='conterInfo' bindtap="goVideo" data-id="{{list.id}}" data-member_id="{{list.member_id}}">
+                <view class='imgShow'>
+                    <view class='subscript lvColor-{{list.member_id}}'>{{list.name}}</view>
+                    <image src="{{imaUrl}}{{list.img}}"></image>
+                </view>
+                <view class='Info-text'>
+                    <view>
+                        {{list.title}}
+                    </view>
+                    <text>{{list.des}}</text>
+                </view>
+            </view>
+        </block>
+        <view class="noData {{articleData==''?'show':''}}">暂无数据</view>
+    </view>
+</view>
+
+<include src="/pages/nav.wxml" />

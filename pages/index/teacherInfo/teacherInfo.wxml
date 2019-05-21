@@ -1,0 +1,19 @@
+<!--pages/classroom/teacherInfo/teacherInfo.wxml-->
+<!-- 老师详情 -->
+<!-- 导入转html包 -->
+<import src="../../../wxParse/wxParse.wxml"/> 
+<view class="title">
+    <image src='/img/return.png' bindtap="goReturn"></image>
+    师资详情
+</view>
+<swiper class="swiper" interval="5000" duration="1000">
+    <block>
+        <swiper-item>
+            <image src="{{imaUrl}}{{teacherData.img}}" class="slide-image" mode="scaleToFill" />
+        </swiper-item>
+    </block>
+</swiper>
+<view class='teacherTitle'>{{teacherData.name}}</view>
+<view class='content'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>  
+</view>

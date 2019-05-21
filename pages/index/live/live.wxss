@@ -1,0 +1,271 @@
+/* pages/index/live/live.wxss */
+
+page {
+    width: 100%;
+    height: 100%;
+}
+
+#live {
+    width: 100%;
+    height: 400rpx;
+}
+
+/* 全屏样式 */
+
+.horizontalClass {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* 半屏样式 */
+
+.verticalClass {
+    width: 100%;
+    height: 400rpx;
+}
+
+.domNone {
+    display: none;
+}
+
+.navGoAllArticle{
+    height: 80rpx;
+    line-height: 57rpx;
+    width: 100%;
+    background: #eee;
+    border-bottom: 1rpx solid #e2e2e2;
+}
+
+.navGoAllArticle .ft_item {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    float: left;
+}
+
+.navGoAllArticle .ft_item text {
+    text-align: center;
+    font-size: 26rpx;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10rpx;
+    color: #333;
+    font-weight: 550;
+}
+
+.nav {
+    height: 80rpx;
+    line-height: 70rpx;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1rpx solid #e2e2e2;
+}
+
+.nav .ft_item {
+    width: 33.33%;
+    height: 100%;
+    text-align: center;
+    float: left;
+}
+
+.nav .ft_item text {
+    text-align: center;
+    font-size: 26rpx;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10rpx;
+    color: #333;
+    font-weight: 550;
+}
+
+.nav .action text {
+    color: #edaa2a;
+    border-bottom: 1px solid #edaa2a;
+}
+
+.nav .button{
+    position: fixed;
+    bottom: 300rpx;
+    width: 80rpx;
+    padding: 10rpx;
+    height: auto;
+    right: 0rpx;
+    color: #333;
+    font-size: 20rpx;
+    z-index: 9999;
+}
+
+.nav image{
+    width: 50rpx;
+    height: 50rpx;
+}
+.fullScreen {
+    position: fixed;
+    left: 0rpx;
+    bottom: 0rpx;
+    color: #fff;
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.direction {
+    position: absolute;
+    right: 0rpx;
+    top: 450rpx;
+    color: #fff;
+    width: 50rpx;
+    height: 50rpx;
+}
+
+/* 聊天室部分 */
+
+.comment {
+    border-top: 1px solid #ededed;
+}
+
+.commentTitle {
+    padding: 30rpx;
+    text-align: leftl;
+    font-size: 30rpx;
+    font-weight: 600;
+    border: 1px solid #ededed;
+}
+/* 聊天室消息显示部分 */
+.commentContent {
+    height: 520rpx;
+    margin-bottom: 20rpx;
+}
+/* 会员列表显示部分,礼物显示 */
+.vipListContent,.showReward {
+    height: 640rpx;
+}
+.commentList {
+    height: auto;
+    border-bottom: 1px solid #eee;
+}
+
+.commentName {
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 30rpx;
+    color: #47a8f7;
+    margin: 20rpx 20rpx 20rpx 20rpx;
+}
+
+.vipListName {
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 30rpx;
+    margin: 20rpx 20rpx 20rpx 20rpx;
+    align-items: center;
+    justify-content: center;
+    padding-left: 40rpx;
+}
+
+.vipListName image {
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    left: 10rpx;
+}
+
+.commentonter {
+    min-height: 40rpx;
+    line-height: 40rpx;
+    font-size: 25rpx;
+    color: #333;
+    margin: 10rpx 20rpx 20rpx 60rpx;
+    word-break: break-all;
+}
+
+.commentSet {
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.commentSet input {
+    display: inline-block;
+    margin: 0 10rpx;
+    width: 550rpx;
+    height: 80rpx;
+    color: #333;
+    border: 1px solid #999;
+    border-radius: 5px;
+    background-color: #ddd;
+}
+
+.commentSet button {
+    display: inline-block;
+    width: 150rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 0 10rpx;
+    color: #fff;
+    background-color: #e5bc19;
+}
+
+/* 打赏部分 */
+
+.showReward {
+    background-color: #fff;
+}
+
+.floor {
+    font-size: 0;
+    width: 100%;
+}
+
+.floor-item, .floor-item-slide {
+    width: 100%;
+    font-size: 100%;
+}
+
+.floor-item {
+    height: 200px;
+    overflow: hidden;
+}
+
+.quick-entry-link {
+    width: 25%;
+    display: inline-block;
+    position: relative;
+    color: #686868;
+    font-size: 0.6875rem;
+    padding: 10rpx 0;
+    text-align: center;
+    font-family: PingFang-Medium, PingFangSC-Regular, Helvetica;
+}
+
+.showReward  image {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.showReward span {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: box;
+    line-clamp: 1;
+    box-orient: vertical;
+    height: 0.875rem;
+    line-height: 0.875rem;
+}
+
+.showReward span {
+    font-size: 0.75rem;
+}
+
+
+.giftAnimation{
+    position: absolute;
+    display: none;
+    width: 80rpx;
+    height: 80rpx;
+}
+.giftAnimation image{
+    width: 80rpx;
+    height: 80rpx;
+}
